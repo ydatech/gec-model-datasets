@@ -1,0 +1,22 @@
+## Where the samples will be written
+save_data: data/run-novalid/gce
+## Where the vocab(s) will be written
+src_vocab: data/run-novalid/gce.vocab.src
+tgt_vocab: data/run-novalid/gce.vocab.tgt
+# Prevent overwriting existing files in the folder
+overwrite: False
+
+# Corpus opts:
+data:
+    corpus_1:
+        path_src: data/src-train.txt
+        path_tgt: data/tgt-train.txt
+
+# Train on a single GPU
+# world_size: 1
+# gpu_ranks: [0]
+
+# Where to save the checkpoints
+save_model: data/run-novalid/model
+save_checkpoint_steps: 500
+train_steps: 1000
